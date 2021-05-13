@@ -8,10 +8,10 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class BT_Letras extends cc.Component {
 
     onLoad () {this.node.on('touchstart', function(e){
-             cc.director.loadScene('Portugues');
+             cc.director.loadScene('Letras');
          });}
 
 }

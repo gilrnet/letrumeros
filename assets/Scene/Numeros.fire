@@ -17,7 +17,7 @@
         "__id__": 2
       },
       {
-        "__id__": 8
+        "__id__": 7
       }
     ],
     "_active": false,
@@ -83,9 +83,6 @@
       },
       {
         "__id__": 6
-      },
-      {
-        "__id__": 7
       }
     ],
     "_prefab": null,
@@ -281,22 +278,6 @@
     "_id": "94MN5GxBxABZTPEwUAz1k1"
   },
   {
-    "__type__": "23b7cI4dHtI0pi/FNEbSeLh",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 2
-    },
-    "_enabled": true,
-    "direcao": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "type": null,
-    "_id": "18xGIC889CFbKXqXSmvAiJ"
-  },
-  {
     "__type__": "cc.Node",
     "_name": "bg-matematica",
     "_objFlags": 0,
@@ -307,7 +288,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 9
+        "__id__": 8
       }
     ],
     "_prefab": null,
@@ -363,7 +344,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 8
+      "__id__": 7
     },
     "_enabled": true,
     "_materials": [
