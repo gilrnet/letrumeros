@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "joinha",
+    "_name": "avancar",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -36,8 +36,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 120,
-      "height": 196
+      "width": 80,
+      "height": 76
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -48,8 +48,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -108,
-        157,
+        284,
+        408,
         0,
         0,
         0,
@@ -89,7 +89,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "8bb5a339-be93-4a92-b570-e271831efb1e"
+      "__uuid__": "4e5511e3-c9bd-4569-8069-baf1e2b6a1f3"
     },
     "_type": 0,
     "_sizeMode": 1,

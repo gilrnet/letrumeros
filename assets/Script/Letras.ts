@@ -8,7 +8,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class Letras extends cc.Component {
 
     @property(cc.Label)
     label: cc.Label = null;
@@ -25,14 +25,6 @@ export default class NewClass extends cc.Component {
     @property
     yMax: number = 312;
 
-    win() {
-        var joinha = cc.instantiate(this.joinhaPrefab);
-        this.node.addChild(joinha);
-        var posx = this.xMin + Math.random() * (this.xMax - this.xMin);
-        var posy = this.yMin + Math.random() * (this.yMax - this.yMin);
-        joinha.setPosition(posx,posy);
-    }
-
     onLoad ()  {
         console.log("------ Início Onload --------")
         var manager  = cc.director.getCollisionManager();
@@ -44,8 +36,6 @@ export default class NewClass extends cc.Component {
         game.enabled = true;
 
         console.log("------ Término Onload --------")
-
-        this.win()
     }
 
 }
