@@ -10,8 +10,9 @@ Referências
 Piaget,  J. A  formação  do  símbolo  na  criança:  imitação,  jogo  e  sonho,  imagem  e representação: J. Zahar. 1971
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
-
+https://www.sbgames.org/sbgames2017/papers/CulturaShort/175521.pdf
 https://www.scielo.br/pdf/prc/v15n2/14356.pdf
+http://www.diaadiaeducacao.pr.gov.br/portals/pde/arquivos/1562-8.pdf
 
 Jean Piaget pode ser uma boa referência para o nosso trabalho co relação à parte cognitiva infantil na aprendizagem
 https://www.escritas.org/pt/estante/jean-piaget
