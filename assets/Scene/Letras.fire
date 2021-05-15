@@ -450,7 +450,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "sprite_b",
+    "_name": "sp-letra",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2

@@ -5,36 +5,52 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-const {ccclass, property} = cc._decorator;
+const { ccclass, property } = cc._decorator;
 
 var letra_b = false;
 var letra_o = false;
+var letra_l = false;
+var letra_a = false;
+var letra_i = false;
+var letra_g = false;
+
+var map = new Map([['b', false], ['o', false], ['l', false], ['a', false], ['i', false], ['j', false]]);
 
 
 @ccclass
 export default class NewClass extends cc.Component {
 
-    onCollisionEnter (other: cc.Collider, self: cc.Collider) {
+    onLoad() {
+        map.forEach(function (nome, i) {
+            console.log('[forEach]', nome, i);
+        })
+    }
 
-        console.log(other.node.name + " - "+self.node.name)
-        //game over
-        if ( ( (other.node.name) == ('b') )&&((self.node.name) == ('sprite_b'))
-        ){
-
-            letra_b = true;
+    onCollisionEnter(other: cc.Collider, self: cc.Collider) {
+        if (self.node.name == 'sp-letra') {
+            map.set(other.node.name, true);
         }
+        console.log("Map: " + map.get(other.node.name))
+    }
 
-        if ( ( (other.node.name) == ('o') )&&((self.node.name) == ('sprite_b'))
-        ){
-
-            letra_o = true;
+    onCollisionExit(other: cc.Collider, self: cc.Collider) {
+        if (self.node.name == 'sp-letra') {
+            map.set(other.node.name, false);
         }
     }
 
-    
-update() {
-    if(letra_b && letra_o) {
-        console.log("Passou de fase")
+    update() {
+        if (map.get('b') && map.get('o') && map.get('l') && map.get('a')) {
+            console.log("You Win")
+        }
+
+        var contador = 0;
+        map.forEach(function (letra, i) {
+            if(letra) contador ++;
+            if(contador == 4) {
+                console.log("You lose");
+            }
+        })
+
     }
-}
 }
