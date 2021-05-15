@@ -13,13 +13,27 @@ export default class NewClass extends cc.Component {
     @property(cc.Label)
     label: cc.Label = null;
 
-    //@property
-    //text: string = 'hello';
+    @property (cc.Prefab)
+    joinhaPrefab: cc.Prefab = null; 
 
-    // LIFE-CYCLE CALLBACKS:
+    @property
+    xMin: number = -656;
+    @property 
+    xMax: number = 200;
+    @property 
+    yMin: number =300;
+    @property
+    yMax: number = 312;
 
-    onLoad () 
-    {
+    win() {
+        var joinha = cc.instantiate(this.joinhaPrefab);
+        this.node.addChild(joinha);
+        var posx = this.xMin + Math.random() * (this.xMax - this.xMin);
+        var posy = this.yMin + Math.random() * (this.yMax - this.yMin);
+        joinha.setPosition(posx,posy);
+    }
+
+    onLoad ()  {
         console.log("------ Início Onload --------")
         var manager  = cc.director.getCollisionManager();
         manager.enabled = true;
@@ -30,21 +44,8 @@ export default class NewClass extends cc.Component {
         game.enabled = true;
 
         console.log("------ Término Onload --------")
-    }
-        
-        
 
-    onCollisionEnter (other: cc.Collider, self: cc.Collider) {
-        //game over
-        console.log("------ Colisão --------")
-    }
-
-    onBeginContact(contact, selfCollider, otherCollider) {       
-
-        console.log("------ Colisão --------")
-        
-        console.log(selfCollider.node.name+ '-----' +otherCollider.node.name);
-        
+        this.win()
     }
 
 }

@@ -7,18 +7,10 @@
 
 const { ccclass, property } = cc._decorator;
 
-var letra_b = false;
-var letra_o = false;
-var letra_l = false;
-var letra_a = false;
-var letra_i = false;
-var letra_g = false;
-
 var map = new Map([['b', false], ['o', false], ['l', false], ['a', false], ['i', false], ['j', false]]);
 
-
 @ccclass
-export default class NewClass extends cc.Component {
+export default class LetraBola extends cc.Component {
 
     onLoad() {
         map.forEach(function (nome, i) {
