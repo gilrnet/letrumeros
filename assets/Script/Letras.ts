@@ -20,31 +20,31 @@ export default class NewClass extends cc.Component {
 
     onLoad () 
     {
-        cc.director.getCollisionManager();
-        var manager = cc.director.getCollisionManager();
-            manager.enabled = true;
-            manager.enabledDebugDraw = true;
-            manager.enabledDrawBoundingBox = true;
+        console.log("------ Início Onload --------")
+        var manager  = cc.director.getCollisionManager();
+        manager.enabled = true;
+        manager.enabledDebugDraw = true;
+        manager.enabledDrawBoundingBox = true;
 
         var game = cc.director.getPhysicsManager();
-            game.enabled=true;
-            
-    }
+        game.enabled = true;
 
-    onBeginContact(contact, selfCollider, otherCollider) {       
-        
-        console.log(selfCollider.node.name+ '-----TESTE------' +otherCollider.node.name);
-        
+        console.log("------ Término Onload --------")
     }
+        
+        
 
     onCollisionEnter (other: cc.Collider, self: cc.Collider) {
         //game over
-        cc.log("game over");
+        console.log("------ Colisão --------")
     }
 
-    start () {
+    onBeginContact(contact, selfCollider, otherCollider) {       
 
+        console.log("------ Colisão --------")
+        
+        console.log(selfCollider.node.name+ '-----' +otherCollider.node.name);
+        
     }
 
-    // update (dt) {}
 }
