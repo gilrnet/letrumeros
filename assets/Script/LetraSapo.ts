@@ -6,9 +6,8 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 const { ccclass, property } = cc._decorator;
-import Letras from './Letras';
 
-var map = new Map([['bola', false], ['bela', false], ['bula', false], ['bala', false]]);
+var map = new Map([['sapo', false], ['pato', false], ['gato', false], ['rato', false]]);
 
 @ccclass
 export default class LetraBola extends cc.Component {
@@ -37,7 +36,7 @@ export default class LetraBola extends cc.Component {
         this.node.addChild(atualizar);
         atualizar.setPosition(-50, -220);
         atualizar.on('touchstart', function(){
-            cc.director.loadScene('Letras');
+            cc.director.loadScene('Letras_01');
         });
     }
 
@@ -46,12 +45,12 @@ export default class LetraBola extends cc.Component {
         this.node.addChild(avancar);
         avancar.setPosition(-50, -220);
         avancar.on('touchstart', function(){
-            cc.director.loadScene('Letras_01');
+            cc.director.loadScene('Conclusao');
         });
     }
 
     youWin() {
-        if (map.get('bola')) {
+        if (map.get('sapo')) {
             console.log("You Win")
             this.mostrarJoinha(true)
             this.mostrarAvancar()
@@ -60,7 +59,7 @@ export default class LetraBola extends cc.Component {
 
     youLose() {
         var contador = 0;
-        if (map.get('bela') || map.get('bala') || map.get('bula')) {
+        if (map.get('pato') || map.get('gato') || map.get('rato')) {
             console.log("You Lose")
             this.mostrarJoinha(false)
             this.mostrarAtualizar();

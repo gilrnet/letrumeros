@@ -39,6 +39,9 @@
       },
       {
         "__id__": 21
+      },
+      {
+        "__id__": 23
       }
     ],
     "_active": false,
@@ -83,7 +86,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "autoReleaseAssets": false,
-    "_id": "faacb24b-740c-4558-bb5a-167808f01858"
+    "_id": "208b9621-2f64-401a-9a33-928eb8d1aed8"
   },
   {
     "__type__": "cc.Node",
@@ -417,7 +420,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 377.0966968425967,
+      "width": 375.4166968425967,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -469,8 +472,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "Gilvã Rocha e Isac Veloso",
-    "_N$string": "Gilvã Rocha e Isac Veloso",
+    "_string": "Gilvã Rocha e Isac Velozo",
+    "_N$string": "Gilvã Rocha e Isac Velozo",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -701,7 +704,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 531.91,
+      "width": 476.88,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -753,8 +756,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "https://github.com/isacaguiar/letrumeros",
-    "_N$string": "https://github.com/isacaguiar/letrumeros",
+    "_string": "https://github.com/gilrnet/letrumeros",
+    "_N$string": "https://github.com/gilrnet/letrumeros",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -1054,5 +1057,112 @@
     "_N$overflow": 0,
     "_N$cacheMode": 0,
     "_id": "1fprf1xEpAdomPFtESUtWI"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "home",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 24
+      },
+      {
+        "__id__": 25
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 80,
+      "height": 62
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        48.626,
+        593.681,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "_groupIndex": 0,
+    "groupIndex": 0,
+    "_id": "23uxPVpCVBaJYXTVv7yEAh"
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 23
+    },
+    "_enabled": true,
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_spriteFrame": {
+      "__uuid__": "e7e5a5a9-18b3-425c-ade8-6545da21e0e3"
+    },
+    "_type": 0,
+    "_sizeMode": 1,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_atlas": null,
+    "_id": "4e70YMokdKnrhutxsDQWW9"
+  },
+  {
+    "__type__": "5dffaurU01FaqtSMkRj/WHI",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 23
+    },
+    "_enabled": true,
+    "_id": "6eXQJcD2lFQY/me3GBHHWl"
   }
 ]

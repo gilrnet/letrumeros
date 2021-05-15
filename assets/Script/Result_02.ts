@@ -6,9 +6,8 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 const { ccclass, property } = cc._decorator;
-import Letras from './Letras';
 
-var map = new Map([['bola', false], ['bela', false], ['bula', false], ['bala', false]]);
+var map = new Map([['4', false], ['5', false], ['7', false]]);
 
 @ccclass
 export default class LetraBola extends cc.Component {
@@ -29,29 +28,29 @@ export default class LetraBola extends cc.Component {
         var obj = param ? this.joinhaPrefab : this.opostoJoinhaPrefab;
         var joinha = cc.instantiate(obj);
         this.node.addChild(joinha);
-        joinha.setPosition(150, -10);
+        joinha.setPosition(-100, 120);
     }
 
     mostrarAtualizar() {
         var atualizar = cc.instantiate(this.atualizarPrefab);
         this.node.addChild(atualizar);
-        atualizar.setPosition(-50, -220);
+        atualizar.setPosition(-100, -300);
         atualizar.on('touchstart', function(){
-            cc.director.loadScene('Letras');
+            cc.director.loadScene('Numeros_01');
         });
     }
 
     mostrarAvancar() {
         var avancar = cc.instantiate(this.avancarPrefab);
         this.node.addChild(avancar);
-        avancar.setPosition(-50, -220);
+        avancar.setPosition(-100, -300);
         avancar.on('touchstart', function(){
-            cc.director.loadScene('Letras_01');
+            cc.director.loadScene('Conclusao');
         });
     }
 
     youWin() {
-        if (map.get('bola')) {
+        if (map.get('5')) {
             console.log("You Win")
             this.mostrarJoinha(true)
             this.mostrarAvancar()
@@ -59,32 +58,22 @@ export default class LetraBola extends cc.Component {
     }
 
     youLose() {
-        var contador = 0;
-        if (map.get('bela') || map.get('bala') || map.get('bula')) {
+        if (map.get('4') || map.get('7') ) {
             console.log("You Lose")
             this.mostrarJoinha(false)
             this.mostrarAtualizar();
-        }
-        /*
-        map.forEach(function (letra, i) {
-            if(letra && i != 'bola') contador ++;
-            if(contador == 1) {
-                console.log("You Lose")
-                this.mostrarAtualizar();
-            }
-            //console.log('[forEach]', letra, i);
-        })*/        
+        }     
     }
 
     onCollisionEnter(other: cc.Collider, self: cc.Collider) {
-        if (self.node.name == 'sp-letra') {
+        if (self.node.name == 'result2') {
             map.set(other.node.name, true);
         }
-        //console.log("Map: " + map.get(other.node.name))
+        console.log("Map: " + map.get(other.node.name))
     }
 
     onCollisionExit(other: cc.Collider, self: cc.Collider) {
-        if (self.node.name == 'sp-letra') {
+        if (self.node.name == 'result2') {
             map.set(other.node.name, false);
         }
     }

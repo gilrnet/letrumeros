@@ -8,16 +8,10 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class BT_Abertura extends cc.Component {
 
-    @property(cc.Label)
-    label: cc.Label = null;
-
-    onLoad ()  {
-        var manager  = cc.director.getCollisionManager();
-        manager.enabled = true;
-        var game = cc.director.getPhysicsManager();
-        game.enabled = true;
-    }
+    onLoad () {this.node.on('touchstart', function(e){
+             cc.director.loadScene('Abertura');
+         });}
 
 }

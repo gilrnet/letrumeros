@@ -29,8 +29,8 @@ export default class Letras extends cc.Component {
         console.log("------ Início Onload --------")
         var manager  = cc.director.getCollisionManager();
         manager.enabled = true;
-        manager.enabledDebugDraw = true;
-        manager.enabledDrawBoundingBox = true;
+        //manager.enabledDebugDraw = true;
+        //manager.enabledDrawBoundingBox = true;
 
         var game = cc.director.getPhysicsManager();
         game.enabled = true;
