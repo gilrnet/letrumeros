@@ -11,7 +11,7 @@ const {ccclass, property} = cc._decorator;
 export default class BT_Numeros extends cc.Component {
 
     onLoad () {this.node.on('touchstart', function(e){
-             cc.director.loadScene('Numeros');
+             cc.director.loadScene('NumerosRandom');
          });}
 
 }
