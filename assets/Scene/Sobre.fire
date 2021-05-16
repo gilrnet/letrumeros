@@ -15,6 +15,9 @@
     "_children": [
       {
         "__id__": 2
+      },
+      {
+        "__id__": 26
       }
     ],
     "_active": false,
@@ -388,8 +391,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -10.676,
-        56.623,
+        -217,
+        -59.898,
         0,
         0,
         0,
@@ -483,8 +486,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -13.987,
-        -31.012,
+        201,
+        -59.898,
         0,
         0,
         0,
@@ -578,8 +581,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -336.124,
-        -78.477,
+        -8.716,
+        -112.998,
         0,
         0,
         0,
@@ -673,7 +676,7 @@
       "ctor": "Float64Array",
       "array": [
         -10.279,
-        -86.312,
+        -161.087,
         0,
         0,
         0,
@@ -767,15 +770,15 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        338.312,
-        -142.468,
+        284.802,
+        273.501,
         0,
         0,
         0,
         0,
         1,
-        1,
-        1,
+        1.5,
+        1.5,
         1
       ]
     },
@@ -861,8 +864,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -216.041,
-        14.933,
+        119,
+        -23.898,
         0,
         0,
         0,
@@ -921,7 +924,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Desenvolvido",
+    "_name": "Orientação copy",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -956,8 +959,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -176.207,
-        102.569,
+        -281,
+        -21,
         0,
         0,
         0,
@@ -979,7 +982,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "15uTJptARJuK4/kvVThV8e"
+    "_id": "654P3xB6NP64h0Xtpah014"
   },
   {
     "__type__": "cc.Label",
@@ -996,8 +999,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "Desenvolvido por:",
-    "_N$string": "Desenvolvido por:",
+    "_string": "Desenvolvedores:",
+    "_N$string": "Desenvolvedores:",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -1012,7 +1015,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "1fprf1xEpAdomPFtESUtWI"
+    "_id": "5d20Gg04JJ2qJnzzbDQUsb"
   },
   {
     "__type__": "cc.Node",
@@ -1164,5 +1167,100 @@
     "_originalWidth": 0,
     "_originalHeight": 0,
     "_id": "94MN5GxBxABZTPEwUAz1k1"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "label",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 27
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 5,
+      "g": 5,
+      "b": 5,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 796.04,
+      "height": 130.4
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        469.214,
+        364.897,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "_groupIndex": 0,
+    "groupIndex": 0,
+    "_id": "4cB+/RXIVIN7cECphFjjKG"
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 26
+    },
+    "_enabled": true,
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_string": "Jogo educacional para auxiliar no processo \nde aprendizagem através da interação visual\n",
+    "_N$string": "Jogo educacional para auxiliar no processo \nde aprendizagem através da interação visual\n",
+    "_fontSize": 40,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_spacingX": 0,
+    "_batchAsBitmap": false,
+    "_styleFlags": 0,
+    "_underlineHeight": 0,
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
+    "_N$overflow": 0,
+    "_N$cacheMode": 0,
+    "_id": "1df3T7XpJGk4sU+Y1ZICrV"
   }
 ]

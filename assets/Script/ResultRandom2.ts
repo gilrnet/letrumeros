@@ -34,7 +34,7 @@ export default class LetraBola extends cc.Component {
         this.obj = param ? this.joinhaPrefab : this.opostoJoinhaPrefab;
         this.joinha = cc.instantiate(this.obj);
         this.node.addChild(this.joinha);
-        this.joinha.setPosition(150, -20);
+        this.joinha.setPosition(-100, 120);
     }
 
     mostrarAtualizar() {
