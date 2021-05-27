@@ -43,7 +43,7 @@ export default class LetraBola extends cc.Component {
         this.node.addChild(this.atualizar);
         this.atualizar.setPosition(-100, -180);
         this.atualizar.on('touchstart', function(){
-            cc.director.loadScene('NumerosRandom');
+            cc.director.loadScene('SubtracaoRandom');
         });
     }
 
