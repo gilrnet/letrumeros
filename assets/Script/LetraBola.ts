@@ -25,6 +25,7 @@ export default class LetraBola extends cc.Component {
     @property (cc.Prefab)
     avancarPrefab: cc.Prefab = null; 
 
+    itensRegiao = 0;
     mostrarJoinha(param) {
         var obj = param ? this.joinhaPrefab : this.opostoJoinhaPrefab;
         var joinha = cc.instantiate(obj);
@@ -51,7 +52,7 @@ export default class LetraBola extends cc.Component {
     }
 
     youWin() {
-        if (map.get('bola')) {
+        if (map.get('bola') && this.itensRegiao < 2) {
             console.log("You Win")
             this.mostrarJoinha(true)
             this.mostrarAvancar()
@@ -77,6 +78,7 @@ export default class LetraBola extends cc.Component {
     }
 
     onCollisionEnter(other: cc.Collider, self: cc.Collider) {
+        this.itensRegiao++;
         if (self.node.name == 'sp-letra') {
             map.set(other.node.name, true);
         }
@@ -84,6 +86,7 @@ export default class LetraBola extends cc.Component {
     }
 
     onCollisionExit(other: cc.Collider, self: cc.Collider) {
+        this.itensRegiao--;
         if (self.node.name == 'sp-letra') {
             map.set(other.node.name, false);
         }

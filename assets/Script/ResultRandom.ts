@@ -30,11 +30,13 @@ export default class LetraBola extends cc.Component {
     obj = null;
     avancar = null;
     atualizar = null;
+    itensRegiao = 0;
     mostrarJoinha(param) {
         this.obj = param ? this.joinhaPrefab : this.opostoJoinhaPrefab;
         this.joinha = cc.instantiate(this.obj);
         this.node.addChild(this.joinha);
-        this.joinha.setPosition(150, -20);
+        if(this.joinha != null)
+            this.joinha.setPosition(150, -20);
     }
 
     mostrarAtualizar() {
@@ -69,26 +71,30 @@ export default class LetraBola extends cc.Component {
         if (this.status == 2) {
             console.log("You Lose")
             this.mostrarJoinha(false)
-            //this.mostrarAtualizar();
+            this.mostrarAtualizar();
             this.status = 0;
         }     
     }
 
     onCollisionEnter(other: cc.Collider, self: cc.Collider) {
         console.log("Colision enter: >>>>>>>> "+self.node.name+ " " + other.node.name)
-        if ((self.node.name == 'result1') && (other.node.name == 'resp1')) {
-            this.status = 1;
-        } else if ((self.node.name == 'result1') && (other.node.name == 'resp2') || 
-                    (self.node.name == 'result1') && (other.node.name == 'resp3')) {
+        this.itensRegiao++;
+        console.log("Itens regiao: >>>>>>>> "+this.itensRegiao)
+        if (((self.node.name == 'result1') && (other.node.name == 'resp2') || 
+                    (self.node.name == 'result1') && (other.node.name == 'resp3'))) {
                         console.log("status 2")
             this.status = 2;
-        };
+        } else if (((self.node.name == 'result1') && (other.node.name == 'resp1')) && this.itensRegiao < 2) {
+            this.status = 1;
+        } ;
     }
 
     onCollisionExit(other: cc.Collider, self: cc.Collider) {
-        this.joinha.destroy();
         this.status = 0;
+        this.itensRegiao--;
+        if(this.joinha != null) this.joinha.destroy();
         if(this.avancar != null) this.avancar.destroy();        
+        if(this.atualizar != null) this.atualizar.destroy();
     }
 
     update() {

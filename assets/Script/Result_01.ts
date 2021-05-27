@@ -50,7 +50,7 @@ export default class LetraBola extends cc.Component {
     }
 
     youWin() {
-        if (map.get('2')) {
+        if (map.get('2') && !(map.get('3') || map.get('4')) ) {
             console.log("You Win")
             this.mostrarJoinha(true)
             this.mostrarAvancar()
